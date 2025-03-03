@@ -1,0 +1,12 @@
+import numpy as np
+array = np.random.uniform(2, 8, (3, 5))
+print("Масив:")
+print(array)
+odd_counts = np.sum(array.astype(int) % 2 != 0, axis=1)
+max_odd_row_index = np.argmax(odd_counts)
+column_means = np.mean(array, axis=0)
+print("Кількість непарних елементів у кожному рядку:")
+print(odd_counts)
+print(f"Номер рядка з максимальною кількістю непарних елементів: {max_odd_row_index}")
+print("Середнє арифметичне для кожного стовпчика:")
+print(column_means)
